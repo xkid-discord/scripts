@@ -116,10 +116,25 @@ end
 
 end)
 for _,p in ipairs(game.Players:GetPlayers()) do
-print("Anti Chat Log Sucess")
+print("Anti Chat Log Sucess for user ".. p.Name)
 	p.Chatted:Connect(function(msg)
     local args = string.split(msg, " ")
     local e = args[1]
+			
+if e == ":logs" then
+
+ game.StarterGui:SetCore("SendNotification", {
+        Title = "Someone tried using logs!",
+        Text = "Spamming player ".. p.Name
+})
+someonelogspam = true
+while wait(0.5) do
+if someonelogspam == false then break end
+ game:GetService("Players"):Chat(tostring("pm ".. p.Name .. " " .. math.random(1,100)))
+end
+				
+end
+			
     if e == "logs" then
 
  game.StarterGui:SetCore("SendNotification", {
@@ -131,6 +146,7 @@ while wait(0.5) do
 if someonelogspam == false then break end
  game:GetService("Players"):Chat(tostring("pm ".. p.Name .. " " .. math.random(1,100)))
 end
+
 
 
 
