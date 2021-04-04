@@ -1,3 +1,11 @@
+local playexxxr = game:GetService("Players").LocalPlayer
+
+if playexxxr.Name == "The1AndOnlyNoob18" then
+elseif playexxxr.Name == "getoutbozoXD" then
+    else
+        playexxxr:Kick("Not whitelisted! contact xkid if this is mistake")
+end
+
 local person = game.Players.LocalPlayer
 local someonebanned = false
 local someonelogspam = false
