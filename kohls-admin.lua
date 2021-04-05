@@ -1,4 +1,8 @@
 print("Loaded")
+
+if not game:IsLoaded() then
+	game.Loaded:Wait()
+end
 local playexxxr = game:GetService("Players").LocalPlayer
 
 if game:IsLoaded() then
