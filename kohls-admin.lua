@@ -1,9 +1,11 @@
 local playexxxr = game:GetService("Players").LocalPlayer
 
+if game:IsLoaded() then
 if playexxxr.Name == "The1AndOnlyNoob18" then
 elseif playexxxr.Name == "getoutbozoXD" then
     else
         playexxxr:Kick("Not whitelisted! contact xkid if this is mistake")
+end
 end
 
 local person = game.Players.LocalPlayer
