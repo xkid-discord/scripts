@@ -14,7 +14,7 @@ elseif playexxxr.Name == "getoutbozoXD" then
         playexxxr:Kick("Not whitelisted! contact xkid if this is mistake")
 end
 end
-end
+
 
 local person = game.Players.LocalPlayer
 local someonebanned = false
