@@ -1,3 +1,4 @@
+print("Loaded")
 local playexxxr = game:GetService("Players").LocalPlayer
 
 if game:IsLoaded() then
