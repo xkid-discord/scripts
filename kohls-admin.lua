@@ -71,11 +71,10 @@ if command == "x!shutdown" then
 
 while wait() do
 game:GetService("Players"):Chat(tostring("h Shutting down..."))
-wait(1)
 game:GetService("Players"):Chat("swagify all all all all all all all")
 
 oofgp:Chat("gear me 00000000000000000094794847")
-wait(.5)
+wait(1)
 oofgp.LocalPlayer.Character.Humanoid:EquipTool(oofgp.LocalPlayer.Backpack.VampireVanquisher)
 wait()
 oofgp:Chat("size me .3")
