@@ -1,8 +1,5 @@
-print("Loaded")
 
-if not game:IsLoaded() then
-	game.Loaded:Wait()
-end
+
 local playexxxr = game:GetService("Players").LocalPlayer
 
 if game:IsLoaded() then
@@ -15,17 +12,37 @@ elseif playexxxr.Name == "getoutbozoXD" then
 end
 end
 
-
+local cmds = {
+    "x!ban <user>",
+    "x!unban <user>",
+    "x!autopunish <user>",
+    "x!unautopunish <user>",
+    "x!unlogspam",
+    "x!shutdown",
+    "x!serverhop",
+    "x!antiabuse",
+    "x!unantiabuse",
+    "x!destroyobby",
+    "x!help"
+}
 local person = game.Players.LocalPlayer
 local someonebanned = false
 local someonelogspam = false
 local someonepunished = false
+local antiabuseon 
 local oofgp = game:GetService("Players")
 person.Chatted:Connect(function(chat)
 local args = string.split(chat, " ")
 local command = args[1]
 local name = args[2]
 
+
+if command == "x!help" then
+     print("--- XKID HUB CMDS ---")
+    for i,v in pairs(cmds) do
+        warn(v)
+    end
+end
 -- BAN CMD BAN CMD BAN CMD BAN CMD BAN CMD BAN CMD BAN CMD BAN CMD BAN CMD BAN CMD
  
 if command == "x!ban" then
@@ -43,6 +60,58 @@ game:GetService("Players"):Chat(tostring("pm ".. name .. "" .. math.random(1,100
 end
 end
 
+if command == "x!destroyobby" then
+    for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace.Obby:GetChildren()) do
+    if v.Name == "Jump" then
+        v:Destroy()
+    end
+end
+for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace.Obby:GetChildren()) do
+    if v.Name == "Jump1" then
+        v:Destroy()
+    end
+end
+for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace.Obby:GetChildren()) do
+    if v.Name == "Jump2" then
+        v:Destroy()
+    end
+end
+for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace.Obby:GetChildren()) do
+    if v.Name == "Jump3" then
+        v:Destroy()
+    end
+end
+for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace.Obby:GetChildren()) do
+    if v.Name == "Jump4" then
+        v:Destroy()
+    end
+end
+for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace.Obby:GetChildren()) do
+    if v.Name == "Jump5" then
+        v:Destroy()
+    end
+end
+for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace.Obby:GetChildren()) do
+    if v.Name == "Jump6" then
+        v:Destroy()
+    end
+end
+for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace.Obby:GetChildren()) do
+    if v.Name == "Jump7" then
+        v:Destroy()
+    end
+end
+for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace.Obby:GetChildren()) do
+    if v.Name == "Jump8" then
+        v:Destroy()
+    end
+end
+for i,v in pairs(game.Workspace.Terrain["_Game"].Workspace.Obby:GetChildren()) do
+    if v.Name == "Jump9" then
+        v:Destroy()
+    end
+end
+end
 
 if command == "x!serverhop" then
     
@@ -70,6 +139,31 @@ if command == "x!load" then
 loadstring(game:HttpGet('https://pastebin.com/raw/9SPMjxq2', true))()
 end
 
+
+if command == "x!abusershutdown" then
+    oofgp:Chat("respawn me")
+     oofgp:Chat("ff me")
+     oofgp:Chat("gear me 00000000000000000094794847")
+    while wait() do
+        oofgp:Chat("unpunish me")
+        oofgp:Chat("gear me 00000000000000000094794847")
+        wait(0.5)
+oofgp.LocalPlayer.Character.Humanoid:EquipTool(oofgp.LocalPlayer.Backpack.VampireVanquisher)
+wait()
+oofgp:Chat("size me .3")
+oofgp:Chat("size me .3")
+oofgp:Chat("size me .3")
+oofgp:Chat("size me .3")
+oofgp:Chat("size me .3")
+oofgp:Chat("size me .3")
+oofgp:Chat("size me .3")
+oofgp:Chat("size me .3")
+oofgp:Chat("size me .3")
+oofgp:Chat("size me .3")
+oofgp:Chat("size all nan")
+    end
+end
+
 if command == "x!shutdown" then
 
 while wait() do
@@ -95,7 +189,9 @@ end
 
 end
 
-
+if command == "x!antiabuse" then
+    
+end
 
 
 if command == "x!autopunish" then
@@ -191,3 +287,4 @@ end
         Title = "Loaded!",
         Text = "Loaded xkids Kohls Admin House Tools."
 })
+
