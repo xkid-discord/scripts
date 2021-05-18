@@ -1,1 +1,1 @@
-print("this was launched from the server")
+print("this was launched from yo mama gaming")
