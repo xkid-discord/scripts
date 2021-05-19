@@ -1,8 +1,14 @@
 require(6774017096)
 local debounce = nil
+
+if _G.AntiUnblacklistedModels == true then
 if game:GetService("ReplicatedStorage"):FindFirstChild("hideIt") then
 	game:GetService("ReplicatedStorage").hideIt:Destroy()
 end
+end
+
+
+
 
 
 if _G.AntiServerside == true then
