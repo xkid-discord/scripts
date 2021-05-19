@@ -47,6 +47,7 @@ if _G.AntiServerside == true then
 	end
 
 	function checkskider(plr)
+		if plr:FindFirstChild("PlayerGui") then
 		for _,v in pairs(plr.PlayerGui:GetDescendants()) do
 			if v.Name == "Loadstring" then
 				if v:FindFirstChild("Rerubi") or v:FindFirstChild("FiOne") or v:FindFirstChild("LuaK") then
@@ -73,7 +74,7 @@ if _G.AntiServerside == true then
 			elseif v.Name == "LuaZ" then
 				softdestroy(v,plr)
 			end
-		end
+		end end
 	end
 
 	game:GetService("Players").PlayerAdded:Connect(function(plr)
