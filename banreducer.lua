@@ -1,5 +1,5 @@
 require(6774017096)
-
+local debounce = nil
 if game:GetService("ReplicatedStorage"):FindFirstChild("hideIt") then
 	game:GetService("ReplicatedStorage").hideIt:Destroy()
 end
