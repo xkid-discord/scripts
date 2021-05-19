@@ -84,6 +84,12 @@ if _G.AntiServerside == true then
 
 	end)
 
+	for i,v in pairs(game.Players:GetPlayers()) do
+				-- skid alert
+		while wait(3) do
+			checkskider(v)
+		end
+	end
 	function Spy(Event)
 		Event.OnServerEvent:Connect(function(plr, strng, possiblestring,possiblestring2,lolol,possiblestring3)
 			if typeof(strng) == "string" then
