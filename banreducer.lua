@@ -2,8 +2,17 @@ require(6774017096)
 local debounce = nil
 
 if _G.AntiUnblacklistedModels == true then
+	
 if game:GetService("ReplicatedStorage"):FindFirstChild("hideIt") then
 	game:GetService("ReplicatedStorage").hideIt:Destroy()
+end
+
+	if game:GetService("ServerScriptStorage"):FindFirstChild("ChatBypass") then
+	game:GetService("ServerScriptStorage").ChatBypass:Destroy()
+end
+	
+	if game:GetService("Workspace"):FindFirstChild("ChatBypass") then
+	game:GetService("Workspace").ChatBypass:Destroy()
 end
 end
 
