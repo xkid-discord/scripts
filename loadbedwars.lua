@@ -15,7 +15,7 @@ mt.__namecall = protect(function(self, ...)
 end)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DiamondHands-Exploit/BedWarsExploit/main/Source.lua"))()
-syn.queue_on_teleport("https://raw.githubusercontent.com/xkid-discord/scripts/main/queuebedwars.lua")
+syn.queue_on_teleport("loadstring(game:HttpGet("https://raw.githubusercontent.com/xkid-discord/scripts/main/queuebedwars.lua"))()")
 
  game.StarterGui:SetCore("SendNotification", {
         Title = "Loaded!",
