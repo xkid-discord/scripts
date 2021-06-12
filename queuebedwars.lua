@@ -9,5 +9,4 @@ local args = {
 
 game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged.JoinQueue:InvokeServer(unpack(args))
 
-
-syn.queue_on_teleport("https://raw.githubusercontent.com/xkid-discord/scripts/main/loadbedwars.lua")
+syn.queue_on_teleport("loadstring(game:HttpGet("https://raw.githubusercontent.com/xkid-discord/scripts/main/loadbedwars.lua"))()")
