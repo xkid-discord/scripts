@@ -1,4 +1,5 @@
 wait(5)
+local debounce = "hello"
 local mt = getrawmetatable(game)
 local old = mt.__namecall
 local protect = newcclosure or protect_function
