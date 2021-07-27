@@ -5,7 +5,7 @@ local Library = {Flags = {}} -- This is still being developed.
 ]]
 
 
-local GUILibrary = game:GetObjects("5967634994")[1]
+local GUILibrary = Instance.new("ScreenGui",nil)
 syn.protect_gui(GUILibrary)
 
 GUILibrary.Name = "GUI Library"
